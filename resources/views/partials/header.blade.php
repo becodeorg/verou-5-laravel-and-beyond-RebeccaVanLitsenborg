@@ -1,4 +1,4 @@
-<nav class="bg-white border-gray-200">
+<nav class="bg-gray-100 mb-10 border-gray-200">
     <div class="flex items-center justify-between mx-auto p-4">
         <div class="flex items-center space-x-3">
         </div>
