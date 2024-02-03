@@ -18,7 +18,7 @@ class BookController extends Controller
 
     public function show ()
     {
-        dd('Show Book');
+        return view('books.edit');
     }
 
     public function showCreate()
@@ -38,16 +38,35 @@ class BookController extends Controller
     
         // Add the 'user_id' to the book model
         $book->user_id = $user_id = 1;
-    
-        // Save the book to the database
+
         $book->save();
     
         return redirect()->route('allBooks');
     }
 
-    public function update ()
+    public function editBook($id)
     {
-        dd('Edit Book');
+        $book = Book::find($id);
+    
+        if (!$book) {
+            return abort(404);
+        }
+    
+        return view('books.edit', ['book' => $book]);
+    }
+
+
+    public function updateBook(Request $request, $id)
+    {
+        $book = Book::find($id);
+
+        $book->title = $request->title;
+        $book->author = $request->author;
+        $book->genre = $request->genre;
+
+        $book->save();
+
+        return redirect()->route('allBooks');
     }
 
     public function delete ()

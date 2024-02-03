@@ -29,7 +29,8 @@ Route::get("/books/books", [BookController::class, 'index']) ->name("allBooks");
 Route::get("/books/books/create", [BookController::class, 'showCreate']) ->name("showCreate"); 
 Route::post("/books/books/create", [BookController::class, 'submitCreate']) ->name("submitCreate"); 
 Route::get("/books/books/{id}", [BookController::class, 'show']) ->name("showBook");
-Route::put("/books/books/{id}", [BookController::class, 'update']) ->name("editBook");
-Route::delete("/books/books/{id}", [BookController::class, 'delete']) ->name("deleteBook");
+Route::get("/books/books/{id}/edit", [BookController::class, 'editBook'])->name("editBook");
+Route::put("/books/books/{id}", [BookController::class, 'updateBook'])->name("updateBook");
+Route::delete("/books/books/{id}", [BookController::class, 'deleteBook']) ->name("deleteBook");
 
 
