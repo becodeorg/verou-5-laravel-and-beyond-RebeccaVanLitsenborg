@@ -35,6 +35,6 @@ Route::put("/books/books/{id}", [BookController::class, 'updateBook'])->name("up
 Route::delete("/books/books/{id}", [BookController::class, 'deleteBook']) ->name("deleteBook");
 
 Route::get("/register", [RegisterController::class, 'index'])->name('showRegister');
-Route::post('/register', [RegisterController::class, 'submitRegister'])->name('submitRegister');
+Route::post('/register', [RegisterController::class, 'create'])->name('submitRegister');
 
 
