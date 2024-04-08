@@ -1,15 +1,15 @@
-<nav class="bg-gray-100 mb-4 border-gray-200">
-    <div class="flex items-center justify-between mx-auto p-3">
-        <div class="flex items-center space-x-3">
-        </div>
-        <div class="hidden md:flex items-center space-x-4" id="navbar-default">
-        <a href="/" class="block py-1 px-2 text-sm text-white bg-blue-700 rounded hover:bg-blue-800" aria-current="page">Home</a>
-<a href="{{ route('allBooks') }}" class="block py-1 px-2 text-sm text-gray-900 rounded hover:bg-gray-100">Book Log</a>
+<nav id="navbar-default">
+<a href="{{ route('home') }}">
+    <img src="{{ asset('logo.png') }}" alt="Logo" style="width: 50px; height: auto;">
+</a>
+    <h1 id="welcome">Welcome</h1>
+    <div class ="navlinks">
+        <a href="/" aria-current="page">Home</a>
+        <a href="{{ route('allBooks') }}">Book Log</a>
 @if(auth()->check())
-    <a href="{{ route('logout') }}" class="block py-1 px-2 text-sm text-gray-900 rounded hover:bg-gray-100">Logout</a>
+        <a href="{{ route('logout') }}">Logout</a>
 @else
-    <a href="{{ route('login') }}" class="block py-1 px-2 text-sm text-gray-900 rounded hover:bg-gray-100">Login</a>
+         <a href="{{ route('login') }}">Login</a>
 @endif
-        </div>
     </div>
 </nav>

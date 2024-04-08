@@ -4,8 +4,8 @@
 
 @section('content')
 
-    <section class="flex flex-col items-center justify-center">
-        <h1>Welcome</h1><br>
+    <section class ="homepage">
+        <h1>This is your Personal Book Log</h1><br>
         <p>This is the homepage</p>
     </section>
 
