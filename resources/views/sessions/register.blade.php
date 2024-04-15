@@ -8,6 +8,7 @@
     <div class="register-welcome">
     <div class="welcome-content">
             <h1>Welcome</h1>
+            <img src="{{ asset('/decologo.png') }}" alt="decorative logo">
         </div>
     </div>
             <form class="register-form" method="post" action="{{ route('submitRegister') }}">

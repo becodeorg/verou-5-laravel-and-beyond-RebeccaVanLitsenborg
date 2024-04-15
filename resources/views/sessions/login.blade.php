@@ -8,6 +8,7 @@
     <div class="login-welcome">
     <div class="welcome-content">
             <h1>Welcome</h1>
+            <img src="{{ asset('public/decologo.png') }}" alt="decorative logo">
         </div>
     </div>
 

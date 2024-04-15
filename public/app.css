@@ -38,7 +38,6 @@ h1#welcome {
     font-size: 1.5rem;
     text-decoration: none;
     width: 70%;
-    margin-top: 1rem;
     margin-left: 2rem;
     color: #f3e6ed;
 }
@@ -61,7 +60,12 @@ a {
     display: flex;
     flex-direction: row;
     margin: 1rem;
-    color: #f3e6ed;
+    color: #f3f4f6;
+    text-decoration: none;
+}
+
+nav#navbar-default .navlinks a {
+    color: #f3f4f6; 
     text-decoration: none;
 }
 
@@ -85,13 +89,14 @@ footer {
 section.register-account {
     display: flex;
     margin: auto;
-    background-color: rgba(255, 255, 255, .25);  
+    background-color: rgba(13, 13, 13, 0.529);
     backdrop-filter: blur(5px);
     margin-bottom: 20px;
     width: 60%;
     min-height: 85%;
     border-radius: 2rem;
     height: 80vh;
+    box-shadow: 0 0 8px 3px rgba(205, 144, 77, 0.5);
 }
 
 .register-welcome {
@@ -99,15 +104,18 @@ section.register-account {
     text-align: left;
     padding: 20px;
     width: 30%;
-    background-image: url(bookstack.png);
+    background-image: url(bookstack1.png);
     background-repeat: no-repeat;
-    background-size: 60%;
+    background-size: 65%;
     background-position: center;
+    background-position: bottom;
+    margin-bottom: 60px;
 }
 
 .register-welcome h1 {
     font-size: 3rem;
-    color: #494045;
+    color: #cd904d;
+    text-shadow: 3px 2px 3px rgb(1, 1, 1);
 }
 
 .register-form {
@@ -115,17 +123,19 @@ section.register-account {
     flex-direction: column;
     text-align: left;
     padding: 20px;
-    background-color: rgba(255, 192, 203, 0.50);
+    background-color: rgba(37, 55, 81, 0.371);
     backdrop-filter: blur(5px);
     margin-bottom:0;
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    border-left: #cd904d 2px dashed;
 }
 
 .register-form h1 {
     margin-bottom: 1rem;
     text-align: center;
-    color: #494045;
+    color: #cd904d;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
 /* Login Form */
@@ -176,6 +186,11 @@ section.login {
 }
 
 /* Common Styles */
+
+label {
+    color: #cd904d;
+}
+
 input[type='name'],
 input[type='email'],
 input[type='password'] {
@@ -198,33 +213,35 @@ button.create-account {
     width: 50%;
     padding: 0.5rem;
     border-radius: 0.3rem;
-    background-color: #7a606e;
+    background-color: #cd904d;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    box-shadow: 1px 1px 1px #e3c2d4;
-    border: none;
+    border: 2px #cd904d solid;
     color: #f3e6ed;
     font-size: 0.9rem;
 }
 
 button.create-account:hover {
-    background-color: #e3c2d4;
-    color: #494045;
-    box-shadow: 1px 1px 1px #494045;
+    background-color: rgba(13, 13, 13, 0.529);
+    color: #cd904d;
+    border: 2px #cd904d solid;
 }
 
 div.login-link p,
 a {
     display: inline;
+    color:#cd904d;
 }
 
 div.login-link a {
-    color: #494045;
+    color: #f3f4f6;
     font-size: 1.2rem;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
 a.link:hover {
-    color: #f276a3;
+    color: #cd904d;
+    text-shadow: rgba(13, 13, 13, 0.529) 1px 0 10px;
 }
 
 div.login-link {
@@ -234,6 +251,14 @@ div.login-link {
 
 .register-welcome .welcome-content,
 .login-welcome .welcome-content {
-    margin-bottom: 50px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
     text-align: center;
+}
+
+.welcome-content img {
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    padding-bottom: 25px;
+    margin-top: 15px;
 }
